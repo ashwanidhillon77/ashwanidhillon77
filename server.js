@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // 2. Home route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // 3. Rate Limiter (Spam / Bot attack se bachne ke liye)
