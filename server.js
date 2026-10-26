@@ -3,7 +3,6 @@ const nodemailer = require('nodemailer');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
 const cors = require('cors');
-const app = express();
 
 // .env file se variables load karne ke liye
 require('dotenv').config();
