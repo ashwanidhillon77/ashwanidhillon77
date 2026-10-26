@@ -702,7 +702,7 @@
               </div> 
               <!-- Reply Messages End -->
 
-              <form class="form contact-form" id="contact-form" action="http://localhost:5000/api/send-email" method="POST">
+              <form class="form contact-form" id="contact-form">
                 <div class="container-fluid p-0">
                   <div class="row gx-0">
                     <div class="col-12 col-md-6 form__item animate-in-up">
@@ -831,7 +831,7 @@
         };
 
         try {
-          const response = await fetch('/api/send-email', {
+          const response = await fetch('https://springgreen-salmon-455347.hostingersite.com/api/send-email', {
             method: 'POST',
             headers: {
               'Content-Type': 'application/json'

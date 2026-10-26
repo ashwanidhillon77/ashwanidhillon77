@@ -2,16 +2,20 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const path = require('path');
 const rateLimit = require('express-rate-limit');
+const cors = require('cors');
+const app = express();
 
 // .env file se variables load karne ke liye
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
+ 
 // Middleware
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
 
 // 1. Static files serve karne ke liye
 app.use(express.static(path.join(__dirname, 'public')));
